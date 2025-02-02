@@ -20,7 +20,7 @@ module full_adder (
     output S, Cout    // Outputs: Sum and carry-out
 );
 
-    wire P, G, C1;  // Intermediate wires
+    wire P, G, H;  // Intermediate wires
 
     // First Half Adder
     assign P = A ^ B;    // XOR for Sum
@@ -28,10 +28,10 @@ module full_adder (
 
     // Second Half Adder
     assign S = P ^ Cin;  // XOR with Cin for final Sum
-    assign C1 = P & Cin; // Carry from second half adder
+    assign H = P & Cin; // Carry from second half adder
 
     // Final Carry Out
-    assign Cout = G | C1; // OR gate for final carry
+    assign Cout = G | H; // OR gate for final carry
 
 endmodule
 ```
