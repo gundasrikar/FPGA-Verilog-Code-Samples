@@ -14,6 +14,7 @@ Verilog is a hardware description language (HDL) used to model and simulate digi
 
 **Full Adder Verilog Code**
 
+```
 module full_adder (
     input A, B, Cin,  // Inputs: Two operands and carry-in
     output S, Cout    // Outputs: Sum and carry-out
@@ -33,9 +34,11 @@ module full_adder (
     assign Cout = G | C1; // OR gate for final carry
 
 endmodule
+```
 
 **Full Adder Testbench (Verilog)**
 
+```
 module full_adder_tb;
     reg A, B, Cin;      // Test inputs
     wire S, Cout;       // Test outputs
@@ -68,4 +71,5 @@ module full_adder_tb;
         $monitor("Time = %0t | A = %b | B = %b | Cin = %b | S = %b | Cout = %b", $time, A, B, Cin, S, Cout);
     end
 endmodule
+```
 
