@@ -4,6 +4,10 @@
   
 Verilog is a hardware description language (HDL) used to model and simulate digital circuits, making it essential for FPGA development. It enables designers to describe hardware behavior at various abstraction levels, from gate-level to system-level. FPGAs use Verilog code to configure logic blocks, allowing flexible and reprogrammable circuit design.
 
+You can use an online simulator like EDA Playground ( https://www.edaplayground.com/) to test the code and gain a better understanding of logic gates.
+
+**Stay tuned for more updates, and happy learning :-) !**
+
 </div>
 
 # Declaration and instantiation of modules in Verilog.
@@ -11,6 +15,10 @@ Verilog is a hardware description language (HDL) used to model and simulate digi
 # 1. Full Adder 
 
 ![image](https://github.com/user-attachments/assets/abd56ad4-f418-47e3-8ca9-35bd926dd845)
+
+**Full Adder's Timing Waveform**
+
+![image](https://github.com/user-attachments/assets/09de7355-4481-46e9-9090-253901d08080)
 
 **Full Adder Verilog Code**
 
