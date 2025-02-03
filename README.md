@@ -84,6 +84,11 @@ endmodule
 
 ![image](https://github.com/user-attachments/assets/c2e263f6-b0c7-470d-9b11-c8c28eaa770d)
 
+**JK Flipflop Timing Waveform**
+
+![image](https://github.com/user-attachments/assets/39fafa4c-0b85-450d-b57f-8c8f90509341)
+
+
 **JK Flipflop Verilog Code**
 
 ```
