@@ -82,6 +82,8 @@ endmodule
 ```
 # 2. JK Flipflop
 
+![image](https://github.com/user-attachments/assets/c2e263f6-b0c7-470d-9b11-c8c28eaa770d)
+
 **JK Flipflop Verilog Code**
 
 ```
@@ -109,9 +111,8 @@ endmodule
 
 **JK Flipflop Testbench (Verilog)**
 
-// Testbench for JK Flip-Flop
-
 ```
+// Testbench for JK Flip-Flop
 module tb_jk_flipflop;
     reg J, K, clk;
     wire Q, QB;
