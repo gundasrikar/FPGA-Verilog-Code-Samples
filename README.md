@@ -80,4 +80,66 @@ module full_adder_tb;
     end
 endmodule
 ```
+# 2. JK Flipflop
 
+**JK Flipflop Verilog Code**
+
+```
+// JK Flip-Flop Module
+module jk_flipflop(
+    input J, K, clk,
+    output reg Q, QB
+);
+  
+    initial begin
+      $dumpfile("dump.vcd"); $dumpvars;
+    end
+    
+    always @(posedge clk) begin
+        case ({J, K})
+            2'b00: Q <= Q;      // No change
+            2'b01: Q <= 0;      // Reset
+            2'b10: Q <= 1;      // Set
+            2'b11: Q <= ~Q;     // Toggle
+        endcase
+        QB <= ~Q;              // Complement of Q
+    end
+endmodule
+```
+
+**JK Flipflop Testbench (Verilog)**
+
+// Testbench for JK Flip-Flop
+
+```
+module tb_jk_flipflop;
+    reg J, K, clk;
+    wire Q, QB;
+    
+    // Instantiate the JK flip-flop
+    jk_flipflop uut (
+        .J(J), .K(K), .clk(clk),
+        .Q(Q), .QB(QB)
+    );
+    
+    // Clock Generation
+    initial begin
+      $dumpfile("dump.vcd"); $dumpvars;
+        clk = 0;
+        forever #5 clk = ~clk; // 10 time units period
+    end
+    
+    // Test Sequence
+    initial begin
+      $monitor("Time = %0t | clk = %b, J = %b, K = %b, Q = %b, QB = %b", $time, clk, J, K, Q, QB);
+        
+        J = 0; K = 0; #10; // No Change
+        J = 0; K = 1; #10; // Reset
+        J = 1; K = 0; #10; // Set
+        J = 1; K = 1; #10; // Toggle
+        J = 0; K = 0; #10; // No Change
+        
+        $finish;
+    end
+endmodule
+```
