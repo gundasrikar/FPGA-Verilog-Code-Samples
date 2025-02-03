@@ -82,7 +82,7 @@ endmodule
 ```
 # 2. JK Flipflop
 
-![image](https://github.com/user-attachments/assets/c2e263f6-b0c7-470d-9b11-c8c28eaa770d)
+![image](https://github.com/user-attachments/assets/78d1fd7e-3ce3-4732-a9ba-3da819f1d0f2)
 
 **JK Flipflop Timing Waveform**
 
