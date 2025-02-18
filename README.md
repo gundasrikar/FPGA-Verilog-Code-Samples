@@ -51,7 +51,7 @@ module full_adder_tb;
     reg A, B, Cin;      // Test inputs
     wire S, Cout;       // Test outputs
 
-    // Instantiate Full Adder module (uut is Unity Under Test)
+    // Instantiate Full Adder module (uut is Unit Under Test)
     full_adder uut (
         .A(A), 
         .B(B), 
